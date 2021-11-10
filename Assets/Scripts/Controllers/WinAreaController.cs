@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WinAreaController : MonoBehaviour
 {
+    [SerializeField] ParticleSystem confetti;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Bot"))
@@ -14,6 +16,7 @@ public class WinAreaController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.GetComponent<SwerveMovement>().IsPassed = true;
+            confetti.Play();
         }
        
     }
