@@ -6,6 +6,7 @@ public class UIController : MonoBehaviour
     [SerializeField] Button playButton;
     [SerializeField] Button restartButton;
     [SerializeField] Button mainMenuButton;
+    [SerializeField] Button mainMenuButton2;
 
     void Awake()
     {
@@ -22,6 +23,7 @@ public class UIController : MonoBehaviour
         if (mainMenuButton != null)
         {
             mainMenuButton.onClick.AddListener(BackToMainMenu);
+            mainMenuButton2.onClick.AddListener(BackToMainMenu);
         }
     }
 
